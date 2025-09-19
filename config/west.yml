@@ -1,11 +1,17 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/
+    - name: Radirwolf
+      url-base: https://github.com/Radirwolf
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-keyboards-totem
+      remote: Radirwolf
+      revision: main
+
   self:
     path: config
