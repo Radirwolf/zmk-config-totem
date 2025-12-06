@@ -60,6 +60,16 @@
             bindings = <&kp LG(V)>;
             key-positions = <24 25>;
         };
+
+        combo_GUI_c {
+            bindings = <&kp LC(C)>;
+            key-positions = <24 23>;
+        };
+
+        combo_GUI_x {
+            bindings = <&kp LC(X)>;
+            key-positions = <23 22>;
+        };
     };
 
     macros {
@@ -76,6 +86,14 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+
+        SPC: SPC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LC(T)>, <&macro_press>;
+
+            label = "SPC";
         };
     };
 
