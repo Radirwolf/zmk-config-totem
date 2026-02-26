@@ -70,30 +70,43 @@
             bindings = <&kp LC(X)>;
             key-positions = <23 22>;
         };
+
+        Combo_SPC {
+            bindings = <&SPC>;
+            key-positions = <5 6>;
+        };
+
+        Combo_SPC_2 {
+            bindings = <&SPC_2>;
+            key-positions = <6 7>;
+        };
+
+        Combo_Google {
+            bindings = <&Google>;
+            key-positions = <8 9>;
+        };
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-
         SPC: SPC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LC(T)>, <&macro_press>;
-
+            bindings = <&kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp KP_ENTER>;
             label = "SPC";
+        };
+
+        SPC_2: SPC_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(L) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp KP_ENTER>;
+            label = "SPC_2";
+        };
+
+        Google: Google {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(L) &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp RET>;
+            label = "GOOGLE";
         };
     };
 
